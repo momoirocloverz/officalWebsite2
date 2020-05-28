@@ -1,7 +1,12 @@
 <template>
   <div class="wc-3-home">
-    <div class="banner">
-      <p @click="popTrail"></p>
+    <div class="banner" @click="toLanding">
+        <div class="divideCon">
+            <div class="divideItem">
+                <div class="fakeTryBtn" @click="popTrail"></div>
+            </div>
+            <div class="divideItem"></div>
+        </div>
     </div>
       <div class="sassCon">
           <div class="sassItemCon">
@@ -178,8 +183,13 @@
         this.getTaskArr();
     },
     methods: {
+        toLanding(){
+            this.$router.push({
+               path:'landing'
+            });
+        },
         popTrail(){
-            this.$parent.$parent.dialogVisible = true;
+//            this.$parent.$parent.dialogVisible = true;
         },
         moreAction(){
             this.$store.commit('SET_IS_WHITE',true)
@@ -295,33 +305,35 @@
     background-color: #fff;
     max-width: 1920px;
     margin: 0 auto 0;
-
     .banner {
-      position: relative;
-      color: #fff;
-      max-width: 1920px;
-      height: 550px;
-      text-align: center;
-      background: url("../assets/img/index_banner.png") no-repeat center center;
-      background-size:cover;
-      h2 {
-        font-size: 56px;
-        letter-spacing: .2em;
-        font-weight: 600;
-        padding-top: 130px;
-        padding-bottom: 40px;
-      }
-
-      p {
-        cursor: pointer;
-        position: absolute;
-        top: 300px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        height: 58px;
-        width: 1300px;
-      }
+        z-index: 10;
+        position: relative;
+        max-width: 1920px;
+        height: 550px;        
+/*      background: url("../assets/img/index_banner.png") no-repeat center center;*/
+        background: url("../assets/img/bannersp.png") no-repeat center center;
+        background-size:cover;
+        cursor:pointer;
+        .divideCon {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 1200px;
+            margin: 0 auto;
+            .divideItem {
+                width: 50%;
+                position: relative;                
+                .fakeTryBtn {
+                    z-index: 50;
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 100px;
+                    left: 0;
+                    height: 58px;
+                    width: 200px;
+                }
+            }
+        }
     }
       .sassCon {
           padding-top: 642px;
