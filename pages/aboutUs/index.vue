@@ -82,11 +82,11 @@ export default {
                 {src:require('@/assets/img/qua/555@2x.png'),name:'万才经理人软著'},
                 {src:require('@/assets/img/qua/666@2x.png'),name:'万才经理人软著'},
                 {src:require('@/assets/img/qua/777@2x.png'),name:'万才网平台后台软著'},
-                {src:require('@/assets/img/qua/888@2x.png'),name:'佳薪宝软著'},
+                {src:require('@/assets/img/qua/888.png'),name:'万才企业版软著'},
             ],
             cardList2:[
                 {src:require('@/assets/img/qua/999@2x.png'),name:'万才网客户后台软著'},
-                {src:require('@/assets/img/qua/222.png'),name:'蓝灵王软著'},
+                {src:require('@/assets/img/qua/222.png'),name:'万才个人版软著'},
             ],            
             cardList3:[
                 {src:require('@/assets/img/qua/1212@2x.png'),name:'增值电信业务经营许可证'},

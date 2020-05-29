@@ -23,12 +23,6 @@ export default {
   layout:'empty',
   data () {
     return {
-        img1:require('@/assets/img/landing/p1.png'),
-        img2:require('@/assets/img/landing/p2.png'),
-        img3:require('@/assets/img/landing/p3.png'),
-        img4:require('@/assets/img/landing/p4.png'),
-        img5:require('@/assets/img/landing/p5.png'),
-        tag:require('@/assets/img/landing/tag.png'),
     }
   },
   head() {
@@ -67,6 +61,7 @@ export default {
             background-size:cover;
             background-position: center center;    
             max-width: 1920px;
+            margin: 0 auto;
         }
         .part1 {
             height: 960px;
@@ -90,6 +85,7 @@ export default {
         }
         .fixItem {
             max-width: 1920px;
+            margin: 0 auto;
             height: 120px;
             position: fixed;
             bottom: 0;
@@ -131,7 +127,7 @@ export default {
                     left: 540px;
                     top: 14px;
                     animation-name: scaleLoop;
-                    animation-duration: 1.6s;
+                    animation-duration: 0.7s;
                     animation-iteration-count: infinite;
                 }
             }
