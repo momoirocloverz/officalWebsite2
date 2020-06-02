@@ -38,7 +38,7 @@ export default {
         }
     },
     mounted(){
-//        this.getLink();
+        this.getLink();
     },
     methods:{
         getLink(){
@@ -50,6 +50,7 @@ export default {
                         type: 'image/jpeg',
                         quality: 0.9,
                         margin: 1,
+                        version:1
                     }
                     this.QRCode.toDataURL(data.downloadUrl, opts,(err, url)=> {
                         if (err) throw err
