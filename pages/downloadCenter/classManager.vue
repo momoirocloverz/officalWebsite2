@@ -33,7 +33,7 @@ export default {
     data(){
             return {
                 androidActiveNow:false,
-                androidLink:require('../../assets/img/footerPerson.png'),
+                androidLink:require('../../assets/img/geren.png'),
             }
         },
     mounted(){
