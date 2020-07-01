@@ -1,13 +1,13 @@
 <template>
   <div class="wc-3-home">
-    <div class="banner" @click="toLanding">
-        <div class="divideCon">
-            <div class="divideItem">
-                <div class="fakeTryBtn" @click="popTrail"></div>
+        <div class="headContainer">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" >
+                    <div class="swiper-slide banner" @click="toStupidAi"></div>
+                    <div class="swiper-slide banner1" @click="toLanding"></div>
+                </div>
             </div>
-            <div class="divideItem"></div>
         </div>
-    </div>
       <div class="sassCon">
           <div class="sassItemCon">
               <div class="sassItemSelf itemFirst">
@@ -179,17 +179,38 @@
       }
     },
     mounted() {
+        this.initSwiper();
         this.getList();
         this.getTaskArr();
     },
     methods: {
+        initSwiper(){
+            this.swiperBridge = new Swiper ('.swiper-container', {
+                direction: 'horizontal', 
+                loop: true, 
+                autoplay:true,
+               /* pagination: {
+                  el: '.swiper-pagination',
+                },*/
+                on:{
+                    click: function(){
+//                      alert('你点了Swiper');
+                    },
+                  },
+            }) 
+        },
         toLanding(){
             this.$router.push({
                path:'landing'
             });
         },
+        toStupidAi(){
+            this.$router.push({
+               path:'stupidAi'
+            });
+        },
         popTrail(){
-//            this.$parent.$parent.dialogVisible = true;
+            this.$parent.$parent.dialogVisible = true;
         },
         moreAction(){
             this.$store.commit('SET_IS_WHITE',true)
@@ -305,15 +326,19 @@
     background-color: #fff;
     max-width: 1920px;
     margin: 0 auto 0;
+      .headContainer {
+          z-index: 10;
+            position: relative;
+            max-width: 1920px;
+            height: 550px;   
+      }
     .banner {
         z-index: 10;
         position: relative;
         max-width: 1920px;
         height: 550px;        
-/*      background: url("../assets/img/index_banner.png") no-repeat center center;*/
-        background: url("../assets/img/bannersp.png") no-repeat center center;
+        background: url("../assets/img/banner_july.png") no-repeat center center;
         background-size:cover;
-        cursor:pointer;
         .divideCon {
             display: flex;
             justify-content: center;
@@ -327,7 +352,35 @@
                     z-index: 50;
                     cursor: pointer;
                     position: absolute;
-                    bottom: 100px;
+                    bottom: 190px;
+                    left: 0;
+                    height: 58px;
+                    width: 200px;
+                }
+            }
+        }
+    }
+      .banner1 {
+        z-index: 10;
+        position: relative;
+        max-width: 1920px;
+        height: 550px;        
+        background: url("../assets/img/bannersp.png") no-repeat center center;
+        background-size:cover;
+        .divideCon {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 1200px;
+            margin: 0 auto;
+            .divideItem {
+                width: 50%;
+                position: relative;                
+                .fakeTryBtn {
+                    z-index: 50;
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 190px;
                     left: 0;
                     height: 58px;
                     width: 200px;

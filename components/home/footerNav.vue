@@ -40,8 +40,8 @@ export default {
   data () {
     return {
         qrcodeArr:[
-            { src:require('../../assets/img/footerComp.png'),text:'万才企业版' },
-            { src:require('../../assets/img/footerPerson.png'),text:'万才个人版' },
+            { src:require('../../assets/img/qiye.png'),text:'万才企业版' },
+            { src:require('../../assets/img/geren.png'),text:'万才个人版' },
              { src:require('../../assets/img/b84b53a.png'),text:'微信公众号' },            
         ],
       items: [{
