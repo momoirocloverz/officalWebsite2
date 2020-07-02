@@ -90,7 +90,7 @@ export default {
         .fixItem {
             max-width: 1920px;
             margin: 0 auto;
-            height: 277px;
+            height: 313px;
             position: fixed;
             bottom: 0;
             left: 0;
@@ -99,7 +99,6 @@ export default {
             background-size:cover;
             background-position: center center;  
             background-image: url("../assets/img/stupid/fixedbar_july.png");
-            
             .divideCon {
                 width: 100%;
                 height: 100%;
@@ -115,7 +114,7 @@ export default {
                 .fakeBtn {
                     position: absolute;
                     left: 410px;
-                    bottom: 30px;
+                    bottom: 20px;
                     height: 60px;
                     width: 200px;
                     cursor: pointer;

@@ -3,8 +3,8 @@
         <div class="headContainer">
             <div class="swiper-container">
                 <div class="swiper-wrapper" >
-                    <div class="swiper-slide banner" @click="toStupidAi"></div>
-                    <div class="swiper-slide banner1" @click="toLanding"></div>
+                    <div class="swiper-slide banner" @click="toStupidAi" :key="1"></div>
+                    <div class="swiper-slide banner1" @click="toLanding" :key="2"></div>
                 </div>
             </div>
         </div>

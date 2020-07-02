@@ -12,7 +12,6 @@
               <div class="divideItem"></div>
               <div class="divideItem">
                   <div class="fakeBtn" @click="popTrail"></div>
-                  <div class="tagHere"></div>
                 </div>
             </div>
         </div>
@@ -95,7 +94,6 @@ export default {
             background-size:cover;
             background-position: center center;  
             background-image: url("../assets/img/landing/fixedbar.png");
-            
             .divideCon {
                 width: 100%;
                 height: 100%;
@@ -116,33 +114,7 @@ export default {
                     width: 260px;
                     cursor: pointer;
                 }
-                .tagHere {
-                    height: 43px;
-                    width: 84px;
-                    background-repeat: no-repeat;
-                    background-size:cover;
-                    background-position: center center; 
-                    background-image: url("../assets/img/landing/tag.png");
-                    position: absolute;
-                    left: 540px;
-                    top: 14px;
-                    animation-name: scaleLoop;
-                    animation-duration: 0.7s;
-                    animation-iteration-count: infinite;
-                }
             }
         }
-        @keyframes scaleLoop {
-            from {
-                transform: scale(1)
-            }
-            50% {
-                transform: scale(1.1)
-            }
-            to {
-                transform: scale(1)
-            }
-        }
-        
     }
 </style>
